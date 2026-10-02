@@ -77,6 +77,19 @@ app.post('/messages/save', async (req, res) => {
     })
   }
 })
+//a route to return About Us
+app.get('/about', (req, res) => {
+  res.json({
+    title: 'About Us',
+    paragraphs: [
+      'Hi, my name is Asia. I am a senior double majoring in Computer Science and Psychology. I transferred from Fordham University after my first year',
+      'I most recently interned in Dallas as a Software Engineer intern where I built an AI skill and a Java API endpoint.',
+      'Outside of school, I enjoy playing piano, climbing, and travelling. I am in the NYU climbing club and love going outdoors. The problem solving side of climbing really draws me to it. '
+    ],
+    photoUrl: '/IMG_7500.JPG',
+    photoAlt: 'Asia Photo'
+  })
+})
 
 // export the express app we created to make it available to other modules
 module.exports = app // CommonJS export style!
